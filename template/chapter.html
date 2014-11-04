@@ -5,12 +5,15 @@
 	<title>__ chapter.title __ — __ book.title __</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" type="text/css" href="mutual.css">
-	<link rel="stylesheet" type="text/css" href="chapter.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/mutual.css">
+	<link rel="stylesheet" type="text/css" href="css/desktop.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="css/chapter.css">
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body class="chapter">
-	<div class="cont">
+	<div class="cont" id="cont">
 		<header class="global" id="global-header">
 			<div class="header-in">
 				<h1>__ book.title __</h1>
@@ -20,7 +23,9 @@
 		<div class="content">
 			<section class="article-content">
 				<h1>__ chapter.title __</h1>
-				__ chapter.content __
+				<div class="article-text">
+					__ chapter.content __
+				</div>
 			</section>
 		</div>
 		<footer class="global" id="global-footer">

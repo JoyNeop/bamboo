@@ -1,0 +1,184 @@
+/*@import url(http://joyneop.github.io/fonts/titillium-web.css);*/
+
+body {
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	color: #585858;
+	background-color: #FAFAFA;
+}
+
+.global {
+	box-sizing: border-box;
+}
+
+header.global {
+	background: #000 url(dark-title.jpg) bottom no-repeat scroll;
+	background-size: cover;
+}
+
+header.global .header-in {
+	color: #FFF;
+	margin: 0 auto;
+}
+
+header.global a {
+	display: block;
+}
+
+header.global h1, h2 {
+	color: inherit;
+	font-weight: 400;
+	margin: 0;
+}
+
+header.global h1 {
+	font-weight: 400;
+	text-decoration: none;
+	padding: 20px 0 10px;
+}
+
+header.global h2 {
+	padding: 10px 0;
+	margin: 0;
+}
+
+p {
+	line-height: 1.55em;
+	margin: 25px 0;
+}
+
+p em {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.global a {
+	text-decoration: none;
+}
+
+.content {
+	font-weight: 400;
+	padding-top: 20px;
+	margin-bottom: 90px;
+	background: #FFF;
+	box-shadow: rgba(0, 0, 0, 0.124322) 0 0 4px;
+}
+
+.content h1:lang(en), .content h3:lang(en) {
+	font-family: 'Avenir Next', 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+}
+
+.content h1:lang(ja), .content h3:lang(ja) {
+	font-family: 'Avenir Next', 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+}
+
+.content h1:lang(zh-Hant), .content h3:lang(zh-Hant) {
+	font-family: 'Avenir Next', 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
+}
+
+.article-text :lang(en) {
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+}
+
+.article-text :lang(ja) {
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+}
+
+.article-text :lang(zh-Hant) {
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
+}
+
+.content h1 {
+	font-size: 3em;
+	font-weight: 500;
+	color: #333;
+	text-align: center;
+	margin: 19px 0 22px;
+}
+
+.article-text h3 {
+	font-size: 2.1em;
+	font-weight: bold;
+	margin: 19px 0 20px;
+}
+
+.article-text img {
+	border-radius: 3px;
+}
+
+.article-text > img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-text > p > img {
+	float: right;
+}
+
+.article-text blockquote {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-text pre {
+	font-family: 'Menlo', monospace;
+	font-size: 0.8em;
+	color: #FAFAFA;
+	background: #333;
+	background-image: linear-gradient(#404042, #252527);
+	border-radius: 3px;
+	box-shadow: inset rgba(0, 0, 0, 0.92) 0 1px 4px 0;
+	box-sizing: border-box;
+	width: 80%;
+	padding: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: scroll;
+}
+
+.article-text > canvas {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.article-text figure {
+	font-size: 0.75em;
+	color: #666;
+	text-align: center;
+}
+
+.article-text figure img {
+	margin: 0 auto 1em;
+}
+
+.content footer {
+	font-size: 1.6em;
+	font-weight: 300;
+	text-align: center;
+	margin: 60px 0 0 0;
+}
+
+.content footer a:hover {
+	text-decoration: underline;
+}
+
+.content.more li a {
+	color: #2B8CD2;
+}
+
+nav.prevandnext span a {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+footer.global {
+	font-size: 1.4em;
+	font-weight: 400;
+	text-align: center;
+}

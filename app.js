@@ -52,7 +52,7 @@ fs.writeFileSync(bookSourceDir + '/product/chapters.json', JSON.stringify(TOCCha
 
 // Filling out the template
 function templateFill(templateName, content) {
-	var templateRawText = fs.readFileSync(bookSourceDir + '/theme/' + templateName + '.html').toString();
+	var templateRawText = fs.readFileSync(bookSourceDir + '/template/' + templateName + '.html').toString();
 	var replacedText = templateRawText;
 
 	replacedText = replacedText.replace(/__ meta\.copyright __/ig, config.copyright);
