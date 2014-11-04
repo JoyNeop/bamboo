@@ -1,4 +1,3 @@
-bamboo
-======
+# Bamboo ebook compiler
 
-Still working on this.
+A work in progress. Details coming soon.
