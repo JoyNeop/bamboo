@@ -42,19 +42,22 @@
 		margin-right: auto;
 	}
 
-	.content > * {
-		display: block;
-		width: 760px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 	.article-text {
 		font-size: 1.8em;
 	}
 
-	.article-text > img {
-		max-width: 600px;
+	.article-text > * {
+		display: block;
+		width: 760px;
+		margin: 36px auto;
+	}
+
+	.article-text img {
+		max-width: 920px;
+	}
+
+	.article-text pre {
+		width: 920px;
 	}
 
 	.content footer {
@@ -62,7 +65,11 @@
 	}
 
 	nav.prevandnext {
-		max-width: 600px;
+		max-width: 100%;
 		margin: 0 auto;
+	}
+
+	nav.prevandnext a {
+		padding: 30px 160px;
 	}
 }

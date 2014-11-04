@@ -1,12 +1,11 @@
-/*@import url(http://joyneop.github.io/fonts/titillium-web.css);*/
-
 body {
-	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	color: #585858;
 	background-color: #FAFAFA;
 }
 
 .global {
+	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -69,27 +68,27 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .content h1:lang(en), .content h3:lang(en) {
-	font-family: 'Avenir Next', 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
 .content h1:lang(ja), .content h3:lang(ja) {
-	font-family: 'Avenir Next', 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
 .content h1:lang(zh-Hant), .content h3:lang(zh-Hant) {
-	font-family: 'Avenir Next', 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
+	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
 .article-text :lang(en) {
-	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
 .article-text :lang(ja) {
-	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
 .article-text :lang(zh-Hant) {
-	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Serif', 'PT Serif', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
+	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
 .content h1 {
@@ -134,8 +133,7 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: inset rgba(0, 0, 0, 0.92) 0 1px 4px 0;
 	box-sizing: border-box;
-	width: 80%;
-	padding: 1em;
+	padding: 1.5em;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: scroll;
@@ -168,13 +166,11 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: underline;
 }
 
-.content.more li a {
-	color: #2B8CD2;
-}
-
-nav.prevandnext span a {
-	font-size: 2em;
-	font-weight: 300;
+nav.prevandnext a {
+	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-size: 2.25em;
+	font-weight: 400;
+	color: #39C;
 }
 
 footer.global {
