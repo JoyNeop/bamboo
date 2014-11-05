@@ -96,7 +96,7 @@ nav.prevandnext .prev {
 	text-align: left;
 }
 
-nav.prevandnext .prev span::before {
+nav.prevandnext .prev span.num::before {
 	content: "‹ ";
 }
 
@@ -105,7 +105,7 @@ nav.prevandnext .next {
 	text-align: right;
 }
 
-nav.prevandnext .next span::after {
+nav.prevandnext .next span.num::after {
 	content: " ›";
 }
 

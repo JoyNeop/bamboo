@@ -65,6 +65,7 @@ function templateFill(templateName, content) {
 	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, config.copyright);
 	replacedText = replacedText.replace(/\{\{ book\.title \}\}/ig, config.title);
 	replacedText = replacedText.replace(/\{\{ book\.brief \}\}/ig, config.brief);
+	replacedText = replacedText.replace(/\{\{ book\.language \}\}/ig, config.language);
 	replacedText = replacedText.replace(/\{\{ meta\.author \}\}/ig, config.author);
 	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, config.year);
 

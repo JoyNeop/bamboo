@@ -1,8 +1,6 @@
 window.bamboo = {};
 
-bamboo.getCurrentChapterNumber = function () {
-	return Number(window.location.href.match(/chapter-[0-9]*\.html/)[0].match(/[0-9]+/)[0]);
-};
+bamboo.currentChapterNumber = Number(window.location.href.match(/chapter-[0-9]*\.html/)[0].match(/[0-9]+/)[0]);
 
 bamboo.wget = function (url) {
 	var x = new XMLHttpRequest();
@@ -17,14 +15,13 @@ bamboo.json = function (url) {
 
 bamboo.detectEdgesOfBook = function () {
 	var chapters = bamboo.json("meta/chapters.json");
-	if (bamboo.getCurrentChapterNumber() == 0) {
+	document.getElementById("nav-prev").href = "chapter-" + (bamboo.currentChapterNumber - 1) + ".html";
+	document.getElementById("nav-next").href = "chapter-" + (bamboo.currentChapterNumber + 1) + ".html";
+	document.getElementById("nav-prev-span").innerHTML = "<span class=\"num\">Previous</span><br />" + chapters[(bamboo.currentChapterNumber - 1)];
+	document.getElementById("nav-next-span").innerHTML = "<span class=\"num\">Next</span><br />" + chapters[(bamboo.currentChapterNumber + 1)];
+	if (bamboo.currentChapterNumber == 0) {
 		document.getElementById("nav-prev").remove();
-		document.getElementById("nav-next").href = "chapter-" + (bamboo.getCurrentChapterNumber() + 1) + ".html";
-	} else if (bamboo.getCurrentChapterNumber() == chapters.length - 1) {
+	} else if (bamboo.currentChapterNumber == chapters.length - 1) {
 		document.getElementById("nav-next").remove();
-		document.getElementById("nav-prev").href = "chapter-" + (bamboo.getCurrentChapterNumber() - 1) + ".html";
-	} else {
-		document.getElementById("nav-prev").href = "chapter-" + (bamboo.getCurrentChapterNumber() - 1) + ".html";
-		document.getElementById("nav-next").href = "chapter-" + (bamboo.getCurrentChapterNumber() + 1) + ".html";
 	}
 };

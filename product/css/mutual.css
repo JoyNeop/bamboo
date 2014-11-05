@@ -1,6 +1,6 @@
 body {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
-	color: #555;
+	color: #333;
 	background: #111 url(dark-footer.jpg) bottom fixed no-repeat;
 	background-size: contain;
 }
@@ -76,7 +76,7 @@ a:link, a:visited, a:hover, a:active {
 	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.content h1:lang(zh-Hant), .content h3:lang(zh-Hant) {
+.content h1:lang(zh), .content h3:lang(zh) {
 	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
@@ -88,7 +88,7 @@ a:link, a:visited, a:hover, a:active {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.article-text :lang(zh-Hant) {
+.article-text :lang(zh) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
@@ -96,7 +96,7 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 3em;
 	font-weight: 500;
 	color: #333;
-	text-align: center;
+	text-align: left;
 	margin: 19px 0 22px;
 }
 
@@ -168,16 +168,18 @@ a:link, a:visited, a:hover, a:active {
 }
 
 nav.prevandnext {
+	transition: all 140ms ease;
 }
 
 nav.prevandnext a {
 	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-size: 2.25em;
 	font-weight: 400;
+	line-height: 1.3em;
 	color: #FCFCFC;
 }
 
-nav.prevandnext a span {
+nav.prevandnext a div {
 	transition: all 300ms ease;
 }
 
@@ -198,11 +200,11 @@ nav.prevandnext .next:hover {
 	background: linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
 }
 
-nav.prevandnext .prev:hover span {
+nav.prevandnext .prev:hover div {
 	margin-left: -17px;
 }
 
-nav.prevandnext .next:hover span {
+nav.prevandnext .next:hover div {
 	margin-right: -17px;
 }
 
