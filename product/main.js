@@ -23,3 +23,5 @@ function detectEdgesOfBook() {
 		document.getElementById("nav-prev-chapter").href = "chapter-" + (getCurrentChapterNumber() - 1) + "";
 	};
 };
+
+detectEdgesOfBook();
