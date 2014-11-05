@@ -1,13 +1,13 @@
 # Introduction
-- What Is Algorithm
+What Is Algorithm
 # History
-- From Turing Machine
-- To Lambda Computation
+From Turing Machine
+To Lambda Computation
 # Controllings
-- Loop
-- Recursion
-- Finite-State Machine
+Loop
+Recursion
+Finite-State Machine
 # Finale
-- Further Reading
-- Acknowledgements
-- References
+Further Reading
+Acknowledgements
+References

@@ -22,27 +22,24 @@ function parseConfig(rawText) {
 var bookSourceDir = __dirname;
 config = parseConfig(fs.readFileSync(bookSourceDir + '/config.yml').toString());
 
-
 // Parse TOC
 var TOCRawText = fs.readFileSync(bookSourceDir + '/source/TOC.md').toString();
-var TOCTree = (function(){
-	var TOCArray = TOCRawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
-	var TOCBlocks = [];
-	var TOCChapters = [];
-	for (var i = 0; i < TOCArray.length; i++) {
-		if (TOCArray[i].indexOf('# ') == 0) {
-			TOCBlocks.push({
-				'title' : TOCArray[i].replace('# ', ''),
-				'position' : (i - TOCBlocks.length) // Title before chapter #i
+var TOCTree = (function(tocRawText){
+	var tocArray = tocRawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
+	var tocBlocks = [];
+	var tocChapters = [];
+	for (var i = 0; i < tocArray.length; i++) {
+		if (tocArray[i].indexOf('# ') == 0) {
+			// Regular block title
+			tocBlocks.push({
+				'title' : tocArray[i].replace('# ', ''),
+				'position' : (i - tocBlocks.length) // Title before chapter #i
 			});
-		} else if (TOCArray[i].indexOf('- ') == 0) {
-			TOCChapters.push(TOCArray[i].replace('- ', ''));
 		} else {
-			return false;
-			console.log('TOC parse error');
+			tocChapters.push(tocArray[i]);
 		}
 	};
-	return [ TOCBlocks, TOCChapters ];
+	return [ tocBlocks, tocChapters ];
 })(TOCRawText);
 var TOCBlocks = TOCTree[0];
 var TOCChapters = TOCTree[1];
