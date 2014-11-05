@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>__ chapter.title __ — __ book.title __</title>
+	<title>{{ chapter.title }} — {{ book.title }}</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -16,24 +16,24 @@
 	<div class="cont" id="cont">
 		<header class="global" id="global-header">
 			<div class="header-in">
-				<h1>__ book.title __</h1>
-				<h2>__ book.brief __</h2>
+				<h1>{{ book.title }}</h1>
+				<h2>{{ book.brief }}</h2>
 			</div>
 		</header>
 		<div class="content">
 			<section class="article-content">
-				<h1>__ chapter.title __</h1>
+				<h1>{{ chapter.title }}</h1>
 				<div class="article-text">
-					__ chapter.content __
+					{{ chapter.content }}
 				</div>
 			</section>
 			<nav class="prevandnext" id="chapters-nav">
-				<a class="prev" id="nav-prev-chapter" href="">Previous Chapter</a>
-				<a class="next" id="nav-next-chapter" href="">Next Chapter</a>
+				<a class="prev" id="nav-prev" href="">Previous Chapter</a>
+				<a class="next" id="nav-next" href="">Next Chapter</a>
 			</nav>
 		</div>
 		<footer class="global" id="global-footer">
-			__ meta.copyright __
+			{{ meta.copyright }}
 		</footer>
 	</div>
 </body>

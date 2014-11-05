@@ -55,17 +55,17 @@ function templateFill(templateName, content) {
 	var templateRawText = fs.readFileSync(bookSourceDir + '/template/' + templateName + '.html').toString();
 	var replacedText = templateRawText;
 
-	replacedText = replacedText.replace(/__ meta\.copyright __/ig, config.copyright);
-	replacedText = replacedText.replace(/__ book\.title __/ig, config.title);
-	replacedText = replacedText.replace(/__ book\.brief __/ig, config.brief);
-	replacedText = replacedText.replace(/__ meta\.author __/ig, config.author);
-	replacedText = replacedText.replace(/__ meta\.year __/ig, config.year);
+	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, config.copyright);
+	replacedText = replacedText.replace(/\{\{ book\.title \}\}/ig, config.title);
+	replacedText = replacedText.replace(/\{\{ book\.brief \}\}/ig, config.brief);
+	replacedText = replacedText.replace(/\{\{ meta\.author \}\}/ig, config.author);
+	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, config.year);
 
-	replacedText = replacedText.replace(/__ chapter\.content __/ig, content);
+	replacedText = replacedText.replace(/\{\{ chapter\.content \}\}/ig, content);
 	
 	if (arguments.length == 3) {
 		var chapterIndex = arguments[2];
-		replacedText = replacedText.replace(/__ chapter\.title __/ig, TOCChapters[chapterIndex]);
+		replacedText = replacedText.replace(/\{\{ chapter\.title \}\}/ig, TOCChapters[chapterIndex]);
 	};
 
 	return replacedText;

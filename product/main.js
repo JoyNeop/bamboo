@@ -16,11 +16,11 @@ function json(url) {
 function detectEdgesOfBook() {
 	var chapters = wget("chapters.json");
 	if (getCurrentChapterNumber() == 0) {
-		document.getElementById("nav-prev-chapter").remove();
-		document.getElementById("nav-next-chapter").href = "chapter-" + (getCurrentChapterNumber() + 1) + ".html";
+		document.getElementById("nav-prev").remove();
+		document.getElementById("nav-next").href = "chapter-" + (getCurrentChapterNumber() + 1) + ".html";
 	} else if (getCurrentChapterNumber() == chapters.length - 1) {
-		document.getElementById("nav-next-chapter").remove();
-		document.getElementById("nav-prev-chapter").href = "chapter-" + (getCurrentChapterNumber() - 1) + ".html";
+		document.getElementById("nav-next").remove();
+		document.getElementById("nav-prev").href = "chapter-" + (getCurrentChapterNumber() - 1) + ".html";
 	};
 };
 
