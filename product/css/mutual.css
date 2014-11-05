@@ -79,15 +79,15 @@ a:link, a:visited, a:hover, a:active {
 	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
-.article-text :lang(en) {
+.article-text h4:lang(en), .article-text p:lang(en), .article-text ul:lang(en), .article-text ol:lang(en), .article-text figure:lang(en), .article-text time:lang(en), .article-text address:lang(en) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.article-text :lang(ja) {
+.article-text h4:lang(ja), .article-text p:lang(ja), .article-text ul:lang(ja), .article-text ol:lang(ja), .article-text figure:lang(ja), .article-text time:lang(ja), .article-text address:lang(ja) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.article-text :lang(zh) {
+.article-text h4:lang(zh), .article-text p:lang(zh), .article-text ul:lang(zh), .article-text ol:lang(zh), .article-text figure:lang(zh), .article-text time:lang(zh), .article-text address:lang(zh) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
@@ -103,6 +103,26 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 2.1em;
 	font-weight: bold;
 	margin: 19px 0 20px;
+}
+
+.article-text aside {
+	font-style: italic;
+}
+
+.article-text aside em {
+	font-style: normal;
+}
+
+.article-text p a {
+	color: #18B;
+}
+
+.article-text p code {
+	font-family: 'Menlo', monospace !important;
+	font-size: 15px;
+	background: #F0F0F0;
+	border-radius: 3px;
+	padding: 0 3px;
 }
 
 .article-text img {
@@ -133,10 +153,14 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: inset rgba(0, 0, 0, 0.92) 0 1px 4px 0;
 	box-sizing: border-box;
-	padding: 1.5em;
+	padding: 0 2em 1.2em;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: scroll;
+}
+
+.article-text pre * {
+	font-family: 'Menlo', monospace !important;
 }
 
 .article-text > canvas {
@@ -169,37 +193,32 @@ a:link, a:visited, a:hover, a:active {
 nav.prevandnext {
 	font-family: 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	margin-bottom: 6em;
-	transition: all 140ms ease;
+	transition: all 120ms ease;
 }
 
 nav.prevandnext a {
 	font-size: 1.4em;
 	font-weight: 400;
-	color: #FCFCFC;
 	line-height: 1.3em;
 	text-decoration: none;
 	width: 100%;
 }
 
 nav.prevandnext a div {
-	transition: all 300ms ease;
+	transition: all 120ms ease;
 }
 
 nav.prevandnext a div span {
+	line-height: 1.35em;
 	display: block;
 }
 
 nav.prevandnext a div span.num {
-	padding-bottom: 0.5em;
+	/*padding-bottom: 0.5em;*/
 }
 
 nav.prevandnext a div span.chapter-title {
 	font-size: 1.8em;
-}
-
-nav.prevandnext:hover {
-	color: #FFF;
-	/*background: rgba(0, 0, 0, 0.28);*/
 }
 
 nav.prevandnext .prev:hover {
@@ -223,9 +242,9 @@ nav.prevandnext .next:hover div {
 }
 
 footer.global {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	font-weight: 300;
-	color: #FCFCFC;
+	color: #FFF;
 	text-align: center;
 	text-shadow: rgba(0, 0, 0, 0.6777777) 0 1px 1px;
 	background: #222 url(dark-footer.jpg) bottom scroll no-repeat;
@@ -236,7 +255,7 @@ footer.global .footer-in {
 	width: 100%;
 	padding: 0 0 90px;
 	margin: 0;
-	transition: all 200ms ease;
+	transition: all 120ms ease;
 }
 
 footer.global:hover .footer-in {

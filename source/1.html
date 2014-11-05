@@ -1,11 +1,79 @@
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel vehicula tortor, quis feugiat nunc. Vivamus leo neque, sodales sed iaculis sodales, fermentum consectetur leo. Maecenas mattis convallis libero a scelerisque. Cras sed eros ut est vestibulum vulputate. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum non augue lobortis, imperdiet mi in, pellentesque ante. Ut egestas hendrerit suscipit. Suspendisse tincidunt interdum felis, ac sollicitudin metus semper vitae. Etiam sit amet nisi arcu. Nullam consequat vel ante sit amet lobortis. Integer lacinia velit in convallis fermentum. Pellentesque mi massa, bibendum a mollis ut, tempus non mauris. Nulla facilisi. Cras vulputate dolor eu lectus commodo vulputate.</p>
+<p>Since you've already have some knowledge about HTML, here let's build a simplest HTML document and name it <code>index.html</code>. It looks like this:</p>
 
-<p>Aliquam non odio a est scelerisque rutrum quis pellentesque metus. Proin vulputate cursus leo sit amet laoreet. Quisque ut ante fringilla, pharetra urna non, lobortis arcu. Pellentesque quis sodales quam. Fusce vitae blandit tellus, ut luctus ligula. Nam tincidunt augue odio, eu ornare nulla elementum ultricies. Etiam ullamcorper mollis interdum. Donec molestie sit amet eros vel varius. Donec consectetur, ante in venenatis convallis, tellus magna hendrerit purus, eget accumsan nisi diam in eros. Quisque posuere fermentum blandit.</p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8" /&gt; &lt;!-- Specify edcoding --&gt;
+	&lt;title&gt;My Blog&lt;/title&gt; &lt;!-- Document title --&gt;
 
-<p> Nunc dapibus quam at quam luctus sodales. Aenean tincidunt turpis lorem, pretium luctus velit sodales sit amet. Quisque massa nulla, posuere quis porttitor nec, varius quis augue. Phasellus dolor elit, malesuada et suscipit eget, sodales ac mauris. Praesent lobortis turpis id ullamcorper malesuada. Integer sit amet odio in risus mollis venenatis. Nam vitae imperdiet urna. Nam quis metus enim. Donec eu gravida tellus, id finibus eros. Pellentesque fermentum dui vel libero commodo convallis. Nunc laoreet tempus faucibus. Proin vel risus tempor dui venenatis eleifend. Nulla facilisis mattis sem non pretium. Proin arcu nibh, gravida nec aliquet vel, blandit mattis arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam auctor, leo a placerat rhoncus, est neque feugiat tellus, nec gravida massa leo quis tortor.</p>
+	&lt;!-- Following: All stylesheets we are going to include --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/reset.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme_common.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme_desktop.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme_mobile.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/personal.css"&gt;
 
-<p> Sed vitae maximus leo. Aliquam vitae eleifend magna. Donec iaculis porttitor ultricies. In non ligula tempor, posuere dolor dignissim, commodo libero. Duis imperdiet eu dolor non tristique. Aliquam non justo vitae tortor tincidunt molestie. Praesent eget dui quis ligula tincidunt pretium nec quis metus. Sed a ullamcorper nisl.</p>
+	&lt;!-- Following: All scripts we are going to run --&gt;
+	&lt;script type="text/javascript" src="js/func.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-<p> Pellentesque tempor mauris a urna rutrum egestas. Mauris ultricies suscipit magna, in tristique nibh cursus id. Morbi consectetur, sapien quis laoreet ultrices, nulla turpis hendrerit justo, ac luctus lacus erat et eros. Donec ut felis sodales, commodo eros eu, lobortis felis. Aliquam luctus turpis nec viverra tincidunt. Curabitur accumsan non velit id laoreet. Donec mauris lacus, vulputate sit amet interdum in, dignissim a lorem. Donec congue bibendum semper. Quisque facilisis tortor sit amet ex ullamcorper luctus. Pellentesque fermentum venenatis nisl tristique egestas. Maecenas vel neque ut est elementum ullamcorper. Donec mattis justo eu consequat elementum. Morbi ut gravida lorem, sit amet faucibus nibh. Praesent quam leo, imperdiet in aliquam at, cursus id libero.</p>
+<p>Here, we have added some tags in <code>&lt;head&gt;</code>, including some stylesheets and a script, which can be worked out later. As you have already know what do they mean, I won't repeat the uses of them. If you open this file in your browser, it's empty.</p>
 
-<p> Morbi quis pellentesque augue. Morbi vitae leo ut nisi pretium cursus quis id metus. Duis ullamcorper laoreet lectus eget tristique. Suspendisse accumsan in dui non tempus. Pellentesque sit amet nisl vehicula, viverra mauris nec, commodo tortor. Donec aliquam interdum arcu, sit amet accumsan turpis sagittis sed. Curabitur vitae aliquam lacus, id facilisis lectus. Sed at mi eros. Maecenas posuere, lorem eget dapibus vehicula, tellus purus tristique magna, ut euismod leo libero ac tellus. Phasellus in maximus dolor. Aliquam in dignissim augue, sed malesuada risus. Maecenas maximus, purus at rutrum tempus, sem quam dapibus ante, ut fermentum arcu nunc sed erat.</p>
+<p>Let's move on. As a blog homepage, we need some blocks playing different roles in the page. For example, a header for website titls and navigations, a footer for copoyright note and links to friends' blogs, and finally an area for your posts. On the design level, we are going to show ten most recent posts directly as full text, and older posts will be displayed as a link on a list. You may ask, "What if I have at most ten posts in total?" Good question, but leave it later to be solved. Algorithm-related issues are not this series' topic.</p>
+
+<p>So let's add a <code>&lt;header&gt;</code> and a heading (<code>&lt;h1&gt;</code>) inside the <code>&lt;header&gt;</code>, and corresponding <code>&lt;footer&gt;</code> and the copyright note. Don't forget a container for the posts. So finally it looks like this:</p>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+	&lt;meta charset="utf-8" /&gt; &lt;!-- Specify edcoding --&gt;
+	&lt;title&gt;My Blog&lt;/title&gt; &lt;!-- Document title --&gt;
+
+	&lt;!-- Following: All stylesheets we are going to include --&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/reset.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme_common.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme_desktop.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme_mobile.css"&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/personal.css"&gt;
+
+	&lt;!-- Following: All scripts we are going to run --&gt;
+	&lt;script type="text/javascript" src="js/func.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+	&lt;!-- Here's the header --&gt;
+	&lt;header class="global" id="global-header"&gt;
+		&lt;h1&gt;My Blog&lt;/h1&gt;
+	&lt;/header&gt;
+
+	&lt;!-- Here's the container --&gt;
+	&lt;div class="cont" id="cont"&gt;
+	&lt;/div&gt;
+
+	&lt;!-- Here's the footer --&gt;
+	&lt;footer class="global" id="global-footer"&gt;
+		Copyright © John Appleseed. All Rights Reserved.
+	&lt;/footer&gt;
+
+	&lt;!-- Here's the JavaScript --&gt;
+	&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Have you noticed those attributes on the tags? Yeah, they are useful to specify an element's styles, and they will be useful to locate an element with JavaScript. In JavaScript, there's a built-in function named <code>document.getElementById()</code>, which allows you get the header in the document with <code>document.getElementById("global-header")</code> and then you can access the element. We'll talk about this in next chapter.</p>
+
+<aside>We say <em>"tags"</em> in HTML source code, and say <em>"elements"</em> in rendered webpages. Before you dig deeper, it's okay to think rendered the relation between webpages and HTML source code is same to that between binary executable files and C/C++ source code.</aside>
+
+<p>As you have seen, a <code>&lt;script&gt;</code> can be added everywhere in either <code>&lt;head&gt;</code> of <code>&lt;body&gt;</code>. You could just consider where it is referenced, where it will run at. For example, if you run some script before <code>&lt;footer&gt;</code> using <code>document.getElementById("global-footer")</code> to access the footer, you'll get an error saying null is not an object.</p>
+
+<p>Here we have almost done the HTML template. In next chapter, we'll go start writing JavaScript.</p>
