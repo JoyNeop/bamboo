@@ -173,7 +173,7 @@ nav.prevandnext {
 }
 
 nav.prevandnext a {
-	font-size: 2.25em;
+	font-size: 1.4em;
 	font-weight: 400;
 	color: #FCFCFC;
 	line-height: 1.3em;
@@ -183,6 +183,18 @@ nav.prevandnext a {
 
 nav.prevandnext a div {
 	transition: all 300ms ease;
+}
+
+nav.prevandnext a div span {
+	display: block;
+}
+
+nav.prevandnext a div span.num {
+	padding-bottom: 0.5em;
+}
+
+nav.prevandnext a div span.chapter-title {
+	font-size: 1.8em;
 }
 
 nav.prevandnext:hover {
@@ -228,7 +240,7 @@ footer.global .footer-in {
 }
 
 footer.global:hover .footer-in {
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.35);
 }
 
 footer.global .footer-in div a {
