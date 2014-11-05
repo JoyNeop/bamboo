@@ -52,7 +52,7 @@ function templateFill(templateName, content) {
 	// Remove comments at the beginning of the template which may contain liense information
 	// Whereas that license information doesn't affect generated HTML documents
 	if (templateRawText.indexOf('<!--') == 0) {
-		templateRawText = templateRawText.split('-->')[1];
+		templateRawText = templateRawText.split('\n-->\n')[1];
 	};
 
 	var replacedText = templateRawText;
