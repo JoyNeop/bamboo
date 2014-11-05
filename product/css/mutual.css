@@ -16,7 +16,8 @@ header.global {
 
 header.global .header-in {
 	color: #FFF;
-	margin: 0 auto;
+	padding: 80px 0 50px;
+	margin: 0;
 }
 
 header.global a {
@@ -61,8 +62,7 @@ a:link, a:visited, a:hover, a:active {
 
 .content {
 	font-weight: 400;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 70px 0;
 	background: #FFF;
 	box-shadow: rgba(0, 0, 0, 0.124322) 0 0 4px;
 }
@@ -203,15 +203,15 @@ nav.prevandnext:hover {
 }
 
 nav.prevandnext .prev:hover {
-	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
-	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
-	background: linear-gradient(left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
 }
 
 nav.prevandnext .next:hover {
-	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
-	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
-	background: linear-gradient(right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
+	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: linear-gradient(right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
 }
 
 nav.prevandnext .prev:hover div {
@@ -228,7 +228,7 @@ footer.global {
 	color: #FCFCFC;
 	text-align: center;
 	text-shadow: rgba(0, 0, 0, 0.6777777) 0 1px 1px;
-	background: #111 url(dark-footer.jpg) bottom scroll no-repeat;
+	background: #222 url(dark-footer.jpg) bottom scroll no-repeat;
 	background-size: cover;
 }
 

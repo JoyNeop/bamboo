@@ -10,11 +10,15 @@
 
 	#global-header {
 		text-align: left;
-		padding: 50px 0;
 	}
 
 	#global-header .header-in {
+		width: 100%;
+	}
+
+	#global-header .header-in > * {
 		width: 760px;
+		margin: 0 auto;
 	}
 
 	.global h1 {
