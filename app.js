@@ -46,8 +46,8 @@ var TOCTree = (function(){
 })(TOCRawText);
 var TOCBlocks = TOCTree[0];
 var TOCChapters = TOCTree[1];
-fs.writeFileSync(bookSourceDir + '/product/blocks.json', JSON.stringify(TOCBlocks));
-fs.writeFileSync(bookSourceDir + '/product/chapters.json', JSON.stringify(TOCChapters));
+fs.writeFileSync(bookSourceDir + '/product/meta/blocks.json', JSON.stringify(TOCBlocks));
+fs.writeFileSync(bookSourceDir + '/product/meta/chapters.json', JSON.stringify(TOCChapters));
 
 
 // Filling out the template
