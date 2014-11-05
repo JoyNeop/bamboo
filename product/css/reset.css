@@ -91,18 +91,12 @@ nav.prevandnext a {
 	width: 50%;
 }
 
-nav.prevandnext a:hover {
-	color: #FFF;
-	background: #111;
-	border-radius: 0px;
-}
-
 nav.prevandnext .prev {
 	float: left;
 	text-align: left;
 }
 
-nav.prevandnext .prev::before {
+nav.prevandnext .prev span::before {
 	content: "‹ ";
 }
 
@@ -111,7 +105,7 @@ nav.prevandnext .next {
 	text-align: right;
 }
 
-nav.prevandnext .next::after {
+nav.prevandnext .next span::after {
 	content: " ›";
 }
 

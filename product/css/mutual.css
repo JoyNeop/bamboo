@@ -1,7 +1,8 @@
 body {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
-	color: #585858;
-	background-color: #FAFAFA;
+	color: #555;
+	background: #111 url(dark-footer.jpg) bottom fixed no-repeat;
+	background-size: contain;
 }
 
 .global {
@@ -62,7 +63,7 @@ a:link, a:visited, a:hover, a:active {
 .content {
 	font-weight: 400;
 	padding-top: 20px;
-	margin-bottom: 90px;
+	padding-bottom: 20px;
 	background: #FFF;
 	box-shadow: rgba(0, 0, 0, 0.124322) 0 0 4px;
 }
@@ -166,15 +167,57 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: underline;
 }
 
+nav.prevandnext {
+}
+
 nav.prevandnext a {
 	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-size: 2.25em;
 	font-weight: 400;
-	color: #39C;
+	color: #FCFCFC;
+}
+
+nav.prevandnext a span {
+	transition: all 300ms ease;
+}
+
+nav.prevandnext:hover {
+	color: #FFF;
+	background: rgba(0, 0, 0, 0.28);
+}
+
+nav.prevandnext .prev:hover {
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+}
+
+nav.prevandnext .next:hover {
+	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+}
+
+nav.prevandnext .prev:hover span {
+	margin-left: -17px;
+}
+
+nav.prevandnext .next:hover span {
+	margin-right: -17px;
 }
 
 footer.global {
 	font-size: 1.4em;
 	font-weight: 400;
+	color: #FCFCFC;
 	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0.6777777) 0 1px 1px;
+}
+
+footer.global .footer-in {
+	padding: 130px 0 0;
+}
+
+footer.global .footer-in a {
+	text-decoration: underline;
 }
