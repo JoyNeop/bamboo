@@ -67,19 +67,13 @@
 
 	nav.prevandnext {
 		max-width: 100%;
-		margin: 0 auto;
 	}
 
 	#global-footer {
-		padding: 0 0 50px;
-	}
-
-	#global-footer .footer-in {
-		max-width: 760px;
-		margin: 0 auto;
+		padding: 0;
 	}
 
 	nav.prevandnext a {
-		padding: 30px 90px;
+		padding: 30px 150px;
 	}
 }

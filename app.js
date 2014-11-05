@@ -3,8 +3,6 @@ var fs = require('fs');
 var url = require('url');
 var path = require('path');
 
-var config;
-
 function parseConfig(rawText) {
 	var c = { 'generator' : 'Bamboo' };
 	var configArray = rawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
@@ -20,7 +18,7 @@ function parseConfig(rawText) {
 
 // Default
 var bookSourceDir = __dirname;
-config = parseConfig(fs.readFileSync(bookSourceDir + '/config.yml').toString());
+var config = parseConfig(fs.readFileSync(bookSourceDir + '/config.yml').toString());
 
 // Parse TOC
 var TOCRawText = fs.readFileSync(bookSourceDir + '/source/TOC.md').toString();

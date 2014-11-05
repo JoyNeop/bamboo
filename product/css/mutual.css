@@ -1,12 +1,11 @@
 body {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	color: #333;
-	background: #111 url(dark-footer.jpg) bottom fixed no-repeat;
-	background-size: contain;
+	background: #111;
 }
 
 .global {
-	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Seravek', 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -168,15 +167,18 @@ a:link, a:visited, a:hover, a:active {
 }
 
 nav.prevandnext {
+	font-family: 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	margin-bottom: 6em;
 	transition: all 140ms ease;
 }
 
 nav.prevandnext a {
-	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-size: 2.25em;
 	font-weight: 400;
-	line-height: 1.3em;
 	color: #FCFCFC;
+	line-height: 1.3em;
+	text-decoration: none;
+	width: 100%;
 }
 
 nav.prevandnext a div {
@@ -185,19 +187,19 @@ nav.prevandnext a div {
 
 nav.prevandnext:hover {
 	color: #FFF;
-	background: rgba(0, 0, 0, 0.28);
+	/*background: rgba(0, 0, 0, 0.28);*/
 }
 
 nav.prevandnext .prev:hover {
-	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
+	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
+	background: linear-gradient(left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
 }
 
 nav.prevandnext .next:hover {
-	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
+	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
+	background: linear-gradient(right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.00));
 }
 
 nav.prevandnext .prev:hover div {
@@ -210,16 +212,25 @@ nav.prevandnext .next:hover div {
 
 footer.global {
 	font-size: 1.4em;
-	font-weight: 400;
+	font-weight: 300;
 	color: #FCFCFC;
 	text-align: center;
 	text-shadow: rgba(0, 0, 0, 0.6777777) 0 1px 1px;
+	background: #111 url(dark-footer.jpg) bottom scroll no-repeat;
+	background-size: cover;
 }
 
 footer.global .footer-in {
-	padding: 130px 0 0;
+	width: 100%;
+	padding: 0 0 90px;
+	margin: 0;
+	transition: all 200ms ease;
 }
 
-footer.global .footer-in a {
+footer.global:hover .footer-in {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+footer.global .footer-in div a {
 	text-decoration: underline;
 }

@@ -12,7 +12,7 @@ header.global {
 footer.global {
 	font-size: 15px;
 	line-height: 22px;
-	padding: 50px 0;
+	padding: 0;
 	margin: 0 auto;
 }
 
@@ -88,11 +88,10 @@ nav.prevandnext {
 nav.prevandnext a {
 	display: block;
 	box-sizing: border-box;
-	width: 50%;
 }
 
 nav.prevandnext .prev {
-	float: left;
+	/*float: left;*/
 	text-align: left;
 }
 
@@ -101,7 +100,7 @@ nav.prevandnext .prev span.num::before {
 }
 
 nav.prevandnext .next {
-	float: right;
+	/*float: right;*/
 	text-align: right;
 }
 
