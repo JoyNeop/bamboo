@@ -24,4 +24,6 @@ function detectEdgesOfBook() {
 	};
 };
 
-detectEdgesOfBook();
+window.onload = function () {
+	detectEdgesOfBook();
+};
