@@ -23,5 +23,8 @@ bamboo.detectEdgesOfBook = function () {
 	} else if (bamboo.getCurrentChapterNumber() == chapters.length - 1) {
 		document.getElementById("nav-next").remove();
 		document.getElementById("nav-prev").href = "chapter-" + (bamboo.getCurrentChapterNumber() - 1) + ".html";
-	};
+	} else {
+		document.getElementById("nav-prev").href = "chapter-" + (bamboo.getCurrentChapterNumber() - 1) + ".html";
+		document.getElementById("nav-next").href = "chapter-" + (bamboo.getCurrentChapterNumber() + 1) + ".html";
+	}
 };
