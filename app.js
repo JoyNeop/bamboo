@@ -3,8 +3,6 @@ var fs = require('fs');
 var url = require('url');
 var path = require('path');
 
-var config;
-
 function parseConfig(rawText) {
 	var c = { 'generator' : 'Bamboo' };
 	var configArray = rawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
@@ -20,29 +18,26 @@ function parseConfig(rawText) {
 
 // Default
 var bookSourceDir = __dirname;
-config = parseConfig(fs.readFileSync(bookSourceDir + '/config.yml').toString());
-
+var config = parseConfig(fs.readFileSync(bookSourceDir + '/config.yml').toString());
 
 // Parse TOC
 var TOCRawText = fs.readFileSync(bookSourceDir + '/source/TOC.md').toString();
-var TOCTree = (function(){
-	var TOCArray = TOCRawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
-	var TOCBlocks = [];
-	var TOCChapters = [];
-	for (var i = 0; i < TOCArray.length; i++) {
-		if (TOCArray[i].indexOf('# ') == 0) {
-			TOCBlocks.push({
-				'title' : TOCArray[i].replace('# ', ''),
-				'position' : (i - TOCBlocks.length) // Title before chapter #i
+var TOCTree = (function(tocRawText){
+	var tocArray = tocRawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
+	var tocBlocks = [];
+	var tocChapters = [];
+	for (var i = 0; i < tocArray.length; i++) {
+		if (tocArray[i].indexOf('# ') == 0) {
+			// Regular block title
+			tocBlocks.push({
+				'title' : tocArray[i].replace('# ', ''),
+				'position' : (i - tocBlocks.length) // Title before chapter #i
 			});
-		} else if (TOCArray[i].indexOf('- ') == 0) {
-			TOCChapters.push(TOCArray[i].replace('- ', ''));
 		} else {
-			return false;
-			console.log('TOC parse error');
+			tocChapters.push(tocArray[i]);
 		}
 	};
-	return [ TOCBlocks, TOCChapters ];
+	return [ tocBlocks, tocChapters ];
 })(TOCRawText);
 var TOCBlocks = TOCTree[0];
 var TOCChapters = TOCTree[1];
@@ -57,7 +52,7 @@ function templateFill(templateName, content) {
 	// Remove comments at the beginning of the template which may contain liense information
 	// Whereas that license information doesn't affect generated HTML documents
 	if (templateRawText.indexOf('<!--') == 0) {
-		templateRawText = templateRawText.split('-->')[1];
+		templateRawText = templateRawText.split('\n-->\n')[1];
 	};
 
 	var replacedText = templateRawText;
@@ -65,6 +60,7 @@ function templateFill(templateName, content) {
 	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, config.copyright);
 	replacedText = replacedText.replace(/\{\{ book\.title \}\}/ig, config.title);
 	replacedText = replacedText.replace(/\{\{ book\.brief \}\}/ig, config.brief);
+	replacedText = replacedText.replace(/\{\{ book\.language \}\}/ig, config.language);
 	replacedText = replacedText.replace(/\{\{ meta\.author \}\}/ig, config.author);
 	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, config.year);
 

@@ -1,1 +1,2 @@
 bamboo.detectEdgesOfBook();
+hljs.initHighlightingOnLoad();

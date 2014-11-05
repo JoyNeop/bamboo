@@ -1,12 +1,11 @@
 body {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
-	color: #555;
-	background: #111 url(dark-footer.jpg) bottom fixed no-repeat;
-	background-size: contain;
+	color: #333;
+	background: #111;
 }
 
 .global {
-	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Seravek', 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -17,7 +16,8 @@ header.global {
 
 header.global .header-in {
 	color: #FFF;
-	margin: 0 auto;
+	padding: 80px 0 50px;
+	margin: 0;
 }
 
 header.global a {
@@ -62,8 +62,7 @@ a:link, a:visited, a:hover, a:active {
 
 .content {
 	font-weight: 400;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 70px 0;
 	background: #FFF;
 	box-shadow: rgba(0, 0, 0, 0.124322) 0 0 4px;
 }
@@ -76,19 +75,19 @@ a:link, a:visited, a:hover, a:active {
 	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.content h1:lang(zh-Hant), .content h3:lang(zh-Hant) {
+.content h1:lang(zh), .content h3:lang(zh) {
 	font-family: 'Avenir Next', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
-.article-text :lang(en) {
+.article-text h4:lang(en), .article-text p:lang(en), .article-text ul:lang(en), .article-text ol:lang(en), .article-text figure:lang(en), .article-text time:lang(en), .article-text address:lang(en) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.article-text :lang(ja) {
+.article-text h4:lang(ja), .article-text p:lang(ja), .article-text ul:lang(ja), .article-text ol:lang(ja), .article-text figure:lang(ja), .article-text time:lang(ja), .article-text address:lang(ja) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 }
 
-.article-text :lang(zh-Hant) {
+.article-text h4:lang(zh), .article-text p:lang(zh), .article-text ul:lang(zh), .article-text ol:lang(zh), .article-text figure:lang(zh), .article-text time:lang(zh), .article-text address:lang(zh) {
 	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', sans-serif;
 }
 
@@ -96,7 +95,7 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 3em;
 	font-weight: 500;
 	color: #333;
-	text-align: center;
+	text-align: left;
 	margin: 19px 0 22px;
 }
 
@@ -104,6 +103,26 @@ a:link, a:visited, a:hover, a:active {
 	font-size: 2.1em;
 	font-weight: bold;
 	margin: 19px 0 20px;
+}
+
+.article-text aside {
+	font-style: italic;
+}
+
+.article-text aside em {
+	font-style: normal;
+}
+
+.article-text p a {
+	color: #18B;
+}
+
+.article-text p code {
+	font-family: 'Menlo', monospace !important;
+	font-size: 15px;
+	background: #F0F0F0;
+	border-radius: 3px;
+	padding: 0 3px;
 }
 
 .article-text img {
@@ -134,10 +153,14 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: inset rgba(0, 0, 0, 0.92) 0 1px 4px 0;
 	box-sizing: border-box;
-	padding: 1.5em;
+	padding: 0 2em 1.2em;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: scroll;
+}
+
+.article-text pre * {
+	font-family: 'Menlo', monospace !important;
 }
 
 .article-text > canvas {
@@ -168,56 +191,77 @@ a:link, a:visited, a:hover, a:active {
 }
 
 nav.prevandnext {
+	font-family: 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	margin-bottom: 6em;
+	transition: all 120ms ease;
 }
 
 nav.prevandnext a {
-	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
-	font-size: 2.25em;
+	font-size: 1.4em;
 	font-weight: 400;
-	color: #FCFCFC;
+	line-height: 1.3em;
+	text-decoration: none;
+	width: 100%;
 }
 
-nav.prevandnext a span {
-	transition: all 300ms ease;
+nav.prevandnext a div {
+	transition: all 120ms ease;
 }
 
-nav.prevandnext:hover {
-	color: #FFF;
-	background: rgba(0, 0, 0, 0.28);
+nav.prevandnext a div span {
+	line-height: 1.35em;
+	display: block;
+}
+
+nav.prevandnext a div span.num {
+	/*padding-bottom: 0.5em;*/
+}
+
+nav.prevandnext a div span.chapter-title {
+	font-size: 1.8em;
 }
 
 nav.prevandnext .prev:hover {
-	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: linear-gradient(left, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
 }
 
 nav.prevandnext .next:hover {
-	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
-	background: linear-gradient(right, rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0));
+	background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
+	background: linear-gradient(right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.00));
 }
 
-nav.prevandnext .prev:hover span {
+nav.prevandnext .prev:hover div {
 	margin-left: -17px;
 }
 
-nav.prevandnext .next:hover span {
+nav.prevandnext .next:hover div {
 	margin-right: -17px;
 }
 
 footer.global {
-	font-size: 1.4em;
-	font-weight: 400;
-	color: #FCFCFC;
+	font-size: 1.6em;
+	font-weight: 300;
+	color: #FFF;
 	text-align: center;
 	text-shadow: rgba(0, 0, 0, 0.6777777) 0 1px 1px;
+	background: #222 url(dark-footer.jpg) bottom scroll no-repeat;
+	background-size: cover;
 }
 
 footer.global .footer-in {
-	padding: 130px 0 0;
+	width: 100%;
+	padding: 0 0 90px;
+	margin: 0;
+	transition: all 120ms ease;
 }
 
-footer.global .footer-in a {
+footer.global:hover .footer-in {
+	background: rgba(0, 0, 0, 0.35);
+}
+
+footer.global .footer-in div a {
 	text-decoration: underline;
 }
