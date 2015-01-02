@@ -49,12 +49,6 @@ fs.writeFileSync(bookSourceDir + '/product/meta/chapters.json', JSON.stringify(T
 function templateFill(templateName, content) {
 	var templateRawText = fs.readFileSync(bookSourceDir + '/template/' + templateName + '.html').toString();
 
-	// Remove comments at the beginning of the template which may contain liense information
-	// Whereas that license information doesn't affect generated HTML documents
-	if (templateRawText.indexOf('<!--') == 0) {
-		templateRawText = templateRawText.split('\n-->\n')[1];
-	};
-
 	var replacedText = templateRawText;
 
 	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, config.copyright);
