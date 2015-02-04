@@ -1,11 +1,14 @@
+@import url(/fonts/seravek.css);
+@import url(/fonts/inconsolata.css);
+
 body {
-	font-family: 'Avenir Next', Avenir Next, Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: 'Avenir Next', Avenir, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	color: #333;
 	background: #111;
 }
 
 .global {
-	font-family: 'Seravek', 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -42,7 +45,7 @@ header.global h2 {
 }
 
 p {
-	line-height: 1.55em;
+	line-height: 1.8em;
 	margin: 25px 0;
 }
 
@@ -107,6 +110,7 @@ a:link, a:visited, a:hover, a:active {
 
 .article-text aside {
 	font-style: italic;
+	line-height: 1.8em;
 }
 
 .article-text aside em {
@@ -118,7 +122,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .article-text p code {
-	font-family: 'Menlo', monospace !important;
+	font-family: Inconsolata, monospace !important;
 	font-size: 15px;
 	background: #F0F0F0;
 	border-radius: 3px;
@@ -145,7 +149,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .article-text pre {
-	font-family: 'Menlo', monospace;
+	font-family: Inconsolata, monospace !important;
 	font-size: 0.8em;
 	color: #FAFAFA;
 	background: #333;
@@ -160,7 +164,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .article-text pre * {
-	font-family: 'Menlo', monospace !important;
+	font-family: Inconsolata, monospace !important;
 }
 
 .article-text > canvas {
@@ -191,7 +195,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 nav.prevandnext {
-	font-family: 'Seravek-Light', Seravek, 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: Seravek, 'Open Sans', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-weight: 300;
 	margin-bottom: 6em;
 	transition: all 120ms ease;
 }
