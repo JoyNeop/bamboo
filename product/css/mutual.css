@@ -183,17 +183,6 @@ a:link, a:visited, a:hover, a:active {
 	margin: 0 auto 1em;
 }
 
-.content footer {
-	font-size: 1.6em;
-	font-weight: 200;
-	text-align: center;
-	margin: 60px 0 0 0;
-}
-
-.content footer a:hover {
-	text-decoration: underline;
-}
-
 nav.prevandnext {
 	font-family: Seravek, 'Open Sans', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-weight: 300;
@@ -247,7 +236,7 @@ nav.prevandnext .next:hover div {
 
 footer.global {
 	font-size: 1.6em;
-	font-weight: 300;
+	font-weight: 200;
 	color: #FFF;
 	text-align: center;
 	text-shadow: rgba(0, 0, 0, 0.6777777) 0 1px 1px;
