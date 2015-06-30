@@ -1,8 +1,9 @@
 @import url(/fonts/seravek.css);
+@import url(/fonts/danton.css);
 @import url(/fonts/inconsolata.css);
 
 body {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 	color: #333;
 	background: #111;
 }
@@ -70,31 +71,33 @@ a:link, a:visited, a:hover, a:active {
 	box-shadow: rgba(0, 0, 0, 0.124322) 0 0 4px;
 }
 
+/*
 .content h1:lang(en), .content h3:lang(en) {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 }
 
 .content h1:lang(ja), .content h3:lang(ja) {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 }
 
 .content h1:lang(zh), .content h3:lang(zh) {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', serif;
-}
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', serif;
+}*/
 
 .article-text h4:lang(en), .article-text p:lang(en), .article-text ul:lang(en), .article-text ol:lang(en), .article-text figure:lang(en), .article-text time:lang(en), .article-text address:lang(en) {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 }
 
 .article-text h4:lang(ja), .article-text p:lang(ja), .article-text ul:lang(ja), .article-text ol:lang(ja), .article-text figure:lang(ja), .article-text time:lang(ja), .article-text address:lang(ja) {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 }
 
 .article-text h4:lang(zh), .article-text p:lang(zh), .article-text ul:lang(zh), .article-text ol:lang(zh), .article-text figure:lang(zh), .article-text time:lang(zh), .article-text address:lang(zh) {
-	font-family: 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', serif;
+	font-family: 'Danton Light', 'Danton', 'Palatino', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Sans GB', 'Hiragino Kaku Gotihc ProN', serif;
 }
 
 .content h1 {
+	font-family: Seravek, 'Open Sans', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-size: 3em;
 	font-weight: 500;
 	color: #333;

@@ -1,7 +1,7 @@
-Saber
-Lancer
-Archer
-Rider
-Caster
-Assassin
-Berserker
+Ghost in the Shell
+Neon Genesis Evangelion
+Doraemon
+PSYCHO-PASS
+Fate/Zero
+From The New World
+Shirobako
