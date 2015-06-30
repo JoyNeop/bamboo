@@ -1,6 +1,12 @@
 window.bamboo = {};
 
-bamboo.currentChapterNumber = Number(window.location.href.match(/chapter-[0-9]*\.html/)[0].match(/[0-9]+/)[0]);
+bamboo.currentChapterNumber = (function (n) {
+	if (n || !isNaN(n)) {
+		return Number(n);
+	} else {
+		return null;
+	};
+})(window.location.href.match(/chapter-[0-9]*\.html/)[0].match(/[0-9]+/)[0];);
 
 bamboo.wget = function (url) {
 	var x = new XMLHttpRequest();
