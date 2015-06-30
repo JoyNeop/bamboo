@@ -23,8 +23,8 @@ bamboo.detectEdgesOfBook = function () {
 	var chapters = bamboo.json("meta/chapters.json");
 	document.getElementById('nav-prev').href = 'chapter-' + (bamboo.currentChapterNumber - 1) + '.html';
 	document.getElementById('nav-next').href = 'chapter-' + (bamboo.currentChapterNumber + 1) + '.html';
-	document.getElementById('nav-prev-span').innerHTML = '<span class=\"num\">Back</span><span class=\"chapter-title\">' + chapters[(bamboo.currentChapterNumber - 1)] + '</span>';
-	document.getElementById('nav-next-span').innerHTML = '<span class=\"num\">Next</span><span class=\"chapter-title\">' + chapters[(bamboo.currentChapterNumber + 1)] + '</span>';
+	document.getElementById('nav-prev-span').innerHTML = '<span class=\"num\">Back</span><span class=\"chapter-title\">' + chapters[(bamboo.currentChapterNumber - 2)] + '</span>';
+	document.getElementById('nav-next-span').innerHTML = '<span class=\"num\">Next</span><span class=\"chapter-title\">' + chapters[(bamboo.currentChapterNumber + 0)] + '</span>';
 	if (bamboo.currentChapterNumber) {
 		if (bamboo.currentChapterNumber == 1) {
 			document.getElementById('nav-prev').remove();
