@@ -3,7 +3,7 @@ var fs = require('fs');
 var url = require('url');
 var path = require('path');
 
-function parseConfig(rawText) {
+var parseConfig = function (rawText) {
 	var c = { 'generator' : 'Bamboo' };
 	var configArray = rawText.replace(/\n\n/g, '\n').split('\n'); // It no longer has empty lines and now is an array
 	var configModel = [];
@@ -38,7 +38,7 @@ var TOCTree = (function(tocRawText){
 		}
 	};
 	return [ tocBlocks, tocChapters ];
-})(TOCRawText);
+})(TOCRawText.replace(/^\s\s*/g, '').replace(/\s\s*$/g, ''));
 var TOCBlocks = TOCTree[0];
 var TOCChapters = TOCTree[1];
 fs.writeFileSync(bookSourceDir + '/product/meta/blocks.json', JSON.stringify(TOCBlocks));
@@ -46,7 +46,7 @@ fs.writeFileSync(bookSourceDir + '/product/meta/chapters.json', JSON.stringify(T
 
 
 // Filling out the template
-function templateFill(templateName, content) {
+var templateFill = function (templateName, content) {
 	var templateRawText = fs.readFileSync(bookSourceDir + '/template/' + templateName + '.html').toString();
 
 	// Remove comments at the beginning of the template which may contain liense information
@@ -65,7 +65,7 @@ function templateFill(templateName, content) {
 	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, config.year);
 
 	replacedText = replacedText.replace(/\{\{ chapter\.content \}\}/ig, content);
-	
+
 	if (arguments.length == 3) {
 		var chapterIndex = arguments[2];
 		replacedText = replacedText.replace(/\{\{ chapter\.title \}\}/ig, TOCChapters[chapterIndex]);

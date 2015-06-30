@@ -1,79 +1,22 @@
-<p>Since you've already have some knowledge about HTML, here let's build a simplest HTML document and name it <code>index.html</code>. It looks like this:</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis velit non elit ultricies cursus. Praesent id placerat neque. Curabitur non sollicitudin velit. In hac habitasse platea dictumst. Sed ac tellus iaculis, commodo lorem non, facilisis leo. Cras pellentesque quis nulla non rutrum. In ultrices sodales dui, ac commodo quam auctor a. Donec eget odio nunc. Fusce lobortis nulla ligula, id fermentum lorem tempor ut. Pellentesque a volutpat lacus, non molestie velit. Mauris dignissim felis sem, a pulvinar lacus accumsan sit amet. Praesent sed odio eu dui pulvinar gravida.</p>
 
-<pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;meta charset="utf-8" /&gt; &lt;!-- Specify edcoding --&gt;
-	&lt;title&gt;My Blog&lt;/title&gt; &lt;!-- Document title --&gt;
+<p>Praesent sagittis tempor eros, id interdum felis tempus eu. Curabitur a gravida lectus, vel feugiat libero. Ut quam metus, gravida in venenatis quis, sagittis nec purus. Nullam varius in tellus ac blandit. Etiam lectus felis, pellentesque id lectus et, tincidunt sollicitudin risus. Vivamus ac pulvinar magna, vitae finibus purus. Quisque eleifend lectus sed ligula ullamcorper pulvinar. Etiam quis feugiat ante, sit amet finibus ante. Integer vel pellentesque turpis, non commodo ligula. In posuere congue posuere.</p>
 
-	&lt;!-- Following: All stylesheets we are going to include --&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/reset.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/theme_common.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/theme_desktop.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/theme_mobile.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/personal.css"&gt;
+<figure>
+	<img src="http://joyneop.xyz/joyneop.png">
+	<figcaption>
+		<em>Author</em> Joy Neop
+	</figcaption>
+</figure>
 
-	&lt;!-- Following: All scripts we are going to run --&gt;
-	&lt;script type="text/javascript" src="js/func.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<p>Suspendisse nec arcu lobortis, auctor purus quis, dignissim felis. Aliquam sed eros consequat, placerat massa ut, dictum augue. Duis ac felis venenatis, tristique augue nec, elementum mauris. Nunc quis faucibus urna. Mauris aliquet elit nec erat vestibulum, id vestibulum ante tristique. Phasellus rhoncus dui bibendum est consectetur, nec consequat velit scelerisque. Mauris et sem vitae quam rhoncus ornare. Morbi placerat ipsum sit amet tempus varius. Proin purus elit, suscipit eget justo vel, convallis mollis risus. Nam elementum metus auctor tellus varius, at dapibus nisi accumsan.</p>
 
-<p>Here, we have added some tags in <code>&lt;head&gt;</code>, including some stylesheets and a script, which can be worked out later. As you have already know what do they mean, I won't repeat the uses of them. If you open this file in your browser, it's empty.</p>
+<p>Praesent non sapien cursus, sagittis tortor id, egestas elit. Pellentesque egestas imperdiet arcu, eget dictum est rutrum ac. Suspendisse leo nunc, malesuada et diam ac, venenatis facilisis arcu. Proin vitae porta tellus, nec lobortis risus. Proin pellentesque erat id blandit eleifend. Sed a pulvinar urna. Sed sit amet placerat massa, eu pellentesque dolor. Vestibulum in velit ante. Aliquam nunc nunc, rhoncus id rutrum sed, mattis eget ligula. Donec vulputate mattis varius. Sed molestie metus in neque semper malesuada. Sed quis euismod risus.</p>
 
-<p>Let's move on. As a blog homepage, we need some blocks playing different roles in the page. For example, a header for website titls and navigations, a footer for copoyright note and links to friends' blogs, and finally an area for your posts. On the design level, we are going to show ten most recent posts directly as full text, and older posts will be displayed as a link on a list. You may ask, "What if I have at most ten posts in total?" Good question, but leave it later to be solved. Algorithm-related issues are not this series' topic.</p>
+<p>Pellentesque pharetra quis quam ut bibendum. Fusce facilisis varius lectus, non vulputate orci. Nulla porttitor ante quis porta imperdiet. Integer turpis erat, consequat non odio suscipit, suscipit malesuada mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tincidunt mi. Etiam ultrices dui non augue fermentum, vulputate placerat leo semper. Integer congue enim elit, vitae tincidunt enim mattis in.</p>
 
-<p>So let's add a <code>&lt;header&gt;</code> and a heading (<code>&lt;h1&gt;</code>) inside the <code>&lt;header&gt;</code>, and corresponding <code>&lt;footer&gt;</code> and the copyright note. Don't forget a container for the posts. So finally it looks like this:</p>
+<p>Donec sed bibendum augue, vitae sodales dolor. Fusce vel auctor ligula, facilisis fringilla sapien. Morbi a pretium lectus. Cras hendrerit feugiat nibh id posuere. Nullam vehicula tellus ut felis euismod ultricies. Maecenas risus quam, gravida id lectus ac, aliquet sollicitudin arcu. Phasellus nunc lorem, dignissim accumsan tellus at, suscipit pretium elit. Etiam volutpat, felis sit amet varius bibendum, dolor tortor condimentum ligula, sed imperdiet urna quam vitae diam. Pellentesque eu tempus mauris, nec posuere mi. Nunc id neque at dolor lobortis congue quis eget arcu. In non felis in orci feugiat sodales vitae ac odio. Suspendisse congue imperdiet facilisis. Vestibulum porttitor lectus risus, sed blandit quam pretium eget.</p>
 
-<pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
+<p>Integer elementum eget libero a molestie. Integer viverra egestas bibendum. Suspendisse potenti. Suspendisse nec hendrerit felis. Aliquam consectetur porttitor efficitur. Nullam ullamcorper in justo eget aliquet. Suspendisse in pulvinar erat, vel interdum eros.</p>
 
-	&lt;meta charset="utf-8" /&gt; &lt;!-- Specify edcoding --&gt;
-	&lt;title&gt;My Blog&lt;/title&gt; &lt;!-- Document title --&gt;
-
-	&lt;!-- Following: All stylesheets we are going to include --&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/reset.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/theme_common.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/theme_desktop.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/theme_mobile.css"&gt;
-	&lt;link rel="stylesheet" type="text/css" href="css/personal.css"&gt;
-
-	&lt;!-- Following: All scripts we are going to run --&gt;
-	&lt;script type="text/javascript" src="js/func.js"&gt;&lt;/script&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-
-	&lt;!-- Here's the header --&gt;
-	&lt;header class="global" id="global-header"&gt;
-		&lt;h1&gt;My Blog&lt;/h1&gt;
-	&lt;/header&gt;
-
-	&lt;!-- Here's the container --&gt;
-	&lt;div class="cont" id="cont"&gt;
-	&lt;/div&gt;
-
-	&lt;!-- Here's the footer --&gt;
-	&lt;footer class="global" id="global-footer"&gt;
-		Copyright © John Appleseed. All Rights Reserved.
-	&lt;/footer&gt;
-
-	&lt;!-- Here's the JavaScript --&gt;
-	&lt;script type="text/javascript" src="js/main.js"&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<p>Have you noticed those attributes on the tags? Yeah, they are useful to specify an element's styles, and they will be useful to locate an element with JavaScript. In JavaScript, there's a built-in function named <code>document.getElementById()</code>, which allows you get the header in the document with <code>document.getElementById("global-header")</code> and then you can access the element. We'll talk about this in next chapter.</p>
-
-<aside>We say <em>"tags"</em> in HTML source code, and say <em>"elements"</em> in rendered webpages. Before you dig deeper, it's okay to think rendered the relation between webpages and HTML source code is same to that between binary executable files and C/C++ source code.</aside>
-
-<p>As you have seen, a <code>&lt;script&gt;</code> can be added everywhere in either <code>&lt;head&gt;</code> of <code>&lt;body&gt;</code>. You could just consider where it is referenced, where it will run at. For example, if you run some script before <code>&lt;footer&gt;</code> using <code>document.getElementById("global-footer")</code> to access the footer, you'll get an error saying null is not an object.</p>
-
-<p>Here we have almost done the HTML template. In next chapter, we'll go start writing JavaScript.</p>
+<p>Suspendisse ullamcorper mi vitae dictum dignissim. Donec fermentum dolor et semper porttitor. Nullam in leo sit amet nisi egestas porttitor. Etiam eleifend lorem leo, nec consectetur sem sagittis vulputate. Suspendisse condimentum rutrum nisl, vel lobortis nisl bibendum eget. Proin rutrum molestie finibus. Quisque mattis ornare velit ac efficitur. Nulla facilisi. Praesent tempor hendrerit justo, venenatis bibendum arcu auctor non. Donec nibh lacus, tempus ut eros vel, interdum pellentesque ipsum.</p>
