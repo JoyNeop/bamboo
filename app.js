@@ -45,30 +45,22 @@ var TOCChapters = TOCTree[1];
 fs.writeFileSync(bookSourceDir + '/product/meta/blocks.json', JSON.stringify(TOCBlocks));
 fs.writeFileSync(bookSourceDir + '/product/meta/chapters.json', JSON.stringify(TOCChapters));
 
-//
-var getPlaceholdersReplaced = function (inputText, inputNameSpaces) {
-	var replacedText = inputText;
-	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, inputNameSpaces.config.copyright);
-	replacedText = replacedText.replace(/\{\{ book\.title \}\}/ig, inputNameSpaces.config.title);
-	replacedText = replacedText.replace(/\{\{ book\.brief \}\}/ig, inputNameSpaces.config.brief);
-	replacedText = replacedText.replace(/\{\{ book\.language \}\}/ig, inputNameSpaces.config.language);
-	replacedText = replacedText.replace(/\{\{ meta\.author \}\}/ig, inputNameSpaces.config.author);
-	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, inputNameSpaces.config.year);
-
-	replacedText = replacedText.replace(/\{\{ chapter\.content \}\}/ig, inputNameSpaces.content);
-};
-
 // Filling out the `chapter` template
 var templateChapterFill = function (templateName, content) {
 	var templateRawText = fs.readFileSync(bookSourceDir + '/template/' + templateName + '.html').toString();
 
 	// Remove comments at the beginning of the template which may contain liense information
 	// Whereas that license information doesn't affect generated HTML documents
-	templateRawText = templateRawText.split('^<--.*-->')[1];
+	templateRawText = templateRawText.replace(/^<--.*?-->/, '');
 
 	var replacedText = templateRawText;
-
-	replacedText = getPlaceholdersReplaced(replacedText);
+	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, config.copyright);
+	replacedText = replacedText.replace(/\{\{ book\.title \}\}/ig, config.title);
+	replacedText = replacedText.replace(/\{\{ book\.brief \}\}/ig, config.brief);
+	replacedText = replacedText.replace(/\{\{ book\.language \}\}/ig, config.language);
+	replacedText = replacedText.replace(/\{\{ meta\.author \}\}/ig, config.author);
+	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, config.year);
+	replacedText = replacedText.replace(/\{\{ chapter\.content \}\}/ig, content);
 
 	if (arguments.length == 3) {
 		var chapterIndex = arguments[2];
@@ -80,11 +72,31 @@ var templateChapterFill = function (templateName, content) {
 
 // Filling out the `index` template
 var templateIndexFill = function (TOCTree) {
-	var index = fs.readFileSync(bookSourceDir + '/template/index.html');
+	var content = '';
+	var listItemHtml = fs.readFileSync(bookSourceDir + '/template/toc-list-item.html').toString();
+	var indexHtml = fs.readFileSync(bookSourceDir + '/template/index.html').toString();
+	for (var _i = 0; _i < TOCTree[1].length; _i++) {
+		var i = _i+1;
+		content += listItemHtml.replace(/\{\{ iterator \}\}/ig, i).replace(/\{\{ title \}\}/ig, TOCTree[1][_i]);
+	};
+
+	var replacedText = indexHtml;
+	replacedText = replacedText.replace(/\{\{ meta\.copyright \}\}/ig, config.copyright);
+	replacedText = replacedText.replace(/\{\{ book\.title \}\}/ig, config.title);
+	replacedText = replacedText.replace(/\{\{ book\.brief \}\}/ig, config.brief);
+	replacedText = replacedText.replace(/\{\{ book\.language \}\}/ig, config.language);
+	replacedText = replacedText.replace(/\{\{ meta\.author \}\}/ig, config.author);
+	replacedText = replacedText.replace(/\{\{ meta\.year \}\}/ig, config.year);
+	replacedText = replacedText.replace(/\{\{ chapter\.content \}\}/ig, content);
+	replacedText = replacedText.replace(/\{\{ book\.toc \}\}/ig, content);
+
+	return replacedText.replace(/\{\{ book\.toc \}\}/ig, content);
+
 };
 
 // When I run app.js
-for (var i = 0; i < TOCChapters.length; i++) {
+for (var _i = 0; _i < TOCChapters.length; _i++) {
+	var i = _i+1;
 	var chapterRawText = fs.readFileSync(bookSourceDir + '/source/' + i + '.html').toString();
 	fs.writeFileSync(bookSourceDir + '/product/chapter-' + i + '.html', templateChapterFill('chapter', chapterRawText, i));
 };

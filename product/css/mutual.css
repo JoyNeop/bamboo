@@ -160,7 +160,7 @@ a:link, a:visited, a:hover, a:active {
 	border-radius: 3px;
 	box-shadow: inset rgba(0, 0, 0, 0.92) 0 1px 4px 0;
 	box-sizing: border-box;
-	padding: 0 2em 1.2em;
+	padding: 0 2rem 1.2rem;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: scroll;
@@ -189,7 +189,6 @@ a:link, a:visited, a:hover, a:active {
 nav.prevandnext {
 	font-family: Seravek, 'Open Sans', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-weight: 300;
-	margin-bottom: 6em;
 	transition: all 120ms ease;
 }
 
@@ -252,6 +251,10 @@ footer.global .footer-in {
 	padding: 0 0 90px;
 	margin: 0;
 	transition: all 120ms ease;
+}
+
+footer.global .copyright {
+	padding: 6rem 0 0;
 }
 
 footer.global:hover .footer-in {
