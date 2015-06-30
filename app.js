@@ -38,7 +38,7 @@ var TOCTree = (function(tocRawText){
 		}
 	};
 	return [ tocBlocks, tocChapters ];
-})(TOCRawText.replace(/^\s\s*/g, '').replace(/\s\s*$/g, ''));
+})(TOCRawText.trim());
 var TOCBlocks = TOCTree[0];
 var TOCChapters = TOCTree[1];
 fs.writeFileSync(bookSourceDir + '/product/meta/blocks.json', JSON.stringify(TOCBlocks));
