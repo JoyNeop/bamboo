@@ -98,7 +98,7 @@ var templateIndexFill = function (TOCTree) {
 for (var _i = 0; _i < TOCChapters.length; _i++) {
 	var i = _i+1;
 	var chapterRawText = fs.readFileSync(bookSourceDir + '/source/' + i + '.html').toString();
-	fs.writeFileSync(bookSourceDir + '/product/chapter-' + i + '.html', templateChapterFill('chapter', chapterRawText, i));
+	fs.writeFileSync(bookSourceDir + '/product/chapter-' + i + '.html', templateChapterFill('chapter', chapterRawText, _i));
 };
 fs.writeFileSync(bookSourceDir + '/product/index.html', templateIndexFill(TOCTree));
 
