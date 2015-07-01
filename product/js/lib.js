@@ -1,12 +1,14 @@
 window.bamboo = {};
 
 bamboo.currentChapterNumber = (function (n) {
-	if (n || !isNaN(n)) {
-		return Number(n);
+	if (n) {
+		if (n[0].match(/[0-9]+/).length) {
+			return Number(n[0].match(/[0-9]+/)[0]);
+		}
 	} else {
 		return null;
 	};
-})(window.location.href.match(/chapter-[0-9]*\.html/)[0].match(/[0-9]+/)[0]);
+})(window.location.href.match(/chapter-[0-9]*\.html/));
 
 bamboo.wget = function (url) {
 	var x = new XMLHttpRequest();
