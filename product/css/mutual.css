@@ -1,15 +1,15 @@
 @import url(/fonts/seravek.css);
-@import url(/fonts/ashbury.css);
+@import url(/fonts/erato.css);
 @import url(/fonts/inconsolata.css);
 
 body {
-	font-family: 'Ashbury Light', 'Ashbury', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Erato', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Ping Fang SC', 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 	color: #333;
 	background: #111;
 }
 
 .global {
-	font-family: Seravek, 'San Francisco', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: Seravek, -apple-system, 'SF UI Text', 'SF NS Text', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	box-sizing: border-box;
 }
 
@@ -72,11 +72,11 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .article-text h4, .article-text p, .article-text ul, .article-text ol, .article-text figure, .article-text time, .article-text address {
-	font-family: 'Ashbury Light', 'Ashbury', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
+	font-family: 'Erato', 'Iowan Old Style', Charter, 'PT Serif', 'Merriweather', Georgia, 'Times New Roman', Times, 'Ping Fang SC', 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', serif;
 }
 
 .content h1 {
-	font-family: Seravek, 'Open Sans', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: Seravek, -apple-system, 'SF UI Text', 'SF NS Text', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-size: 3em;
 	font-weight: 500;
 	color: #333;
@@ -166,7 +166,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 nav.prevandnext {
-	font-family: Seravek, 'Open Sans', 'PT-Sans', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
+	font-family: Seravek, -apple-system, 'SF UI Text', 'SF NS Text', 'PT Sans', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Kaku Gotihc ProN', 'Hiragino Sans GB', sans-serif;
 	font-weight: 300;
 	transition: all 120ms ease;
 }
